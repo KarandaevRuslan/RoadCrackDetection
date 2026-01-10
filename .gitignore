@@ -1,0 +1,117 @@
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### IntelliJ IDEA / Android Studio ###
+.idea/
+!.idea/codeStyles/
+!.idea/inspectionProfiles/
+!.idea/runConfigurations/
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries/
+.idea/**/shelf/
+.idea/**/aws.xml
+.idea/**/contentModel.xml
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+.idea/**/gradle.xml
+.idea/**/libraries/
+*.iws
+*.iml
+*.ipr
+
+### Eclipse ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
+
+### Mac OS ###
+.DS_Store
+
+### Android / Gradle ###
+.gradle/
+**/build/
+*.apk
+*.aab
+local.properties
+.externalNativeBuild/
+.cxx/
+lint-results*.xml
+lint-results*.html
+
+# Keystore / signing files (signing = app identity verification)
+*.jks
+*.keystore
+*.pem
+*.der
+
+### Python ###
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+env/
+dist/
+*.egg-info/
+.eggs/
+wheels/
+pip-wheel-metadata/
+.pytest_cache/
+.mypy_cache/
+.pyre/
+.pytype/
+.ruff_cache/
+.cache/
+pip-cache/
+.pip-cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+nosetests.xml
+pytest.xml
+.ipynb_checkpoints/
+
+### Project-specific ignores ###
+# PyTorch model checkpoints (pt = PyTorch serialized model file)
+best*.pt
+
+# ClamAV data / working dir (ClamAV = antivirus engine)
+clamav/
+
+# Firebase service account key (service account = machine user credentials)
+firebase-service-account.json
+
+# Local TLS keystore (keystore = certificate/key container used for HTTPS)
+keystore.p12
+
+# Application config (often contains secrets like passwords/tokens)
+application.yml
+
+test-yolo/
