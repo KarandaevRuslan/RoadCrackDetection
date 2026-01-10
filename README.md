@@ -209,8 +209,3 @@ Template you can fill in:
    ```
 3. Open a Pull Request (PR — a request to merge changes into main).
 
----
-
-## License
-
-Add a `LICENSE` file to define usage terms (MIT/Apache-2.0/GPL, etc.).
