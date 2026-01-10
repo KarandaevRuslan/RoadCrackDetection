@@ -115,3 +115,7 @@ keystore.p12
 application.yml
 
 test-yolo/
+
+*.pptx
+*.docx
+*.xlsx
