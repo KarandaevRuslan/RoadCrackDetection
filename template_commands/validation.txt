@@ -1,0 +1,9 @@
+yolo val `
+	model="D:\Downloads\proj\runs\detect\train2\weights\best.pt" `
+	data="D:\Downloads\proj\TDATA2\data.yaml" `
+	imgsz=768 `
+	conf=0.25 `
+	iou=0.5 `
+	plots=True `
+	save_json=True `
+	save_txt=True

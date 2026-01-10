@@ -1,0 +1,120 @@
+spring:
+  application:
+    name: roadCrackDetectionServer
+  main:
+    banner-mode: "off"
+
+  datasource:
+    url: "jdbc:postgresql://<DB_HOST>:<DB_PORT>/<DB_NAME>"
+    username: "<DB_USERNAME>"
+    password: "<DB_PASSWORD>"
+
+  jpa:
+    hibernate:
+      ddl-auto: "update"
+    properties:
+      hibernate:
+        default_schema: "public"
+
+  servlet:
+    multipart:
+      max-file-size: "10MB"
+      max-request-size: "10MB"
+
+server:
+  address: "0.0.0.0"
+  port: 8443
+  ssl:
+    enabled: true
+    key-store: "classpath:<SSL_KEYSTORE_FILE>"
+    key-store-type: "PKCS12"
+    key-store-password: "<SSL_KEYSTORE_PASSWORD>"
+
+firebase:
+  service-account: "classpath:<FIREBASE_SERVICE_ACCOUNT_JSON>"
+
+yolo:
+  base-url: "http://<YOLO_HOST>:<YOLO_PORT>"
+  detect-path: "/infer"
+  timeout-ms: 5000
+
+yolo-process:
+  enabled: true
+  workdir: "<ABSOLUTE_PATH_TO_YOLO_WORKDIR>"
+  python-exe: "<RELATIVE_OR_ABSOLUTE_PATH_TO_PYTHON_EXE>"
+  args:
+    - "-m"
+    - "uvicorn"
+    - "app:app"
+    - "--host"
+    - "127.0.0.1"
+    - "--port"
+    - "8000"
+
+  health-url: "http://<YOLO_HEALTH_HOST>:<YOLO_HEALTH_PORT>/health"
+  startup-timeout-ms: 20000
+  shutdown-timeout-ms: 5000
+
+logging:
+  level:
+    root: "INFO"
+    com:
+      zaxxer:
+        hikari: "ERROR"
+    org:
+      hibernate: "ERROR"
+      springframework: "ERROR"
+
+image-security:
+  max-bytes: 10485760
+  max-width: 4096
+  max-height: 4096
+  max-megapixels: 20
+  allowed-formats: "JPEG,PNG,WEBP"
+  normalize-format: "PNG"
+
+  antivirus:
+    enabled: true
+    host: "127.0.0.1"
+    port: 3310
+    timeout-ms: 2000
+    start-cla-md: true
+    clamd-exe: "<ABSOLUTE_PATH_TO_CLAMD_EXE>"
+    clamd-conf: "<ABSOLUTE_PATH_TO_CLAMD_CONF>"
+    startup-timeout-ms: 15000
+
+rate-limit:
+  enabled: true
+  cacheTtlMinutes: 60
+
+  rules:
+    - id: "detect"
+      method: "POST"
+      path: "/v1/detect"
+      cost: 5
+      user:
+        capacity: 20
+        refillTokens: 20
+        refillPeriodSeconds: 60
+      ip:
+        capacity: 10
+        refillTokens: 10
+        refillPeriodSeconds: 60
+
+      userPerSecond:
+        capacity: 5
+        refillTokens: 5
+        refillPeriodSeconds: 1
+
+    - id: "default"
+      method: "ANY"
+      path: "/v1/**"
+      cost: 1
+      user:
+        capacity: 120
+        refillTokens: 120
+        refillPeriodSeconds: 60
+      ip:
+        capacity: 60
+        refillTokens: 60
+        refillPeriodSeconds: 60

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "526877244880",
+    "project_id": "roadcrackdetection-2291a",
+    "storage_bucket": "roadcrackdetection-2291a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:526877244880:android:55892b0bfe5deb1a260dd5",
+        "android_client_info": {
+          "package_name": "com.karandaev.roadCrackDetector"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "526877244880-p995fl2nn3t7fk81h90rnsvh077au7f0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.karandaev.roadCrackDetector",
+            "certificate_hash": "2b30647bf38dca2cfb305a6009a6258d59f32925"
+          }
+        },
+        {
+          "client_id": "526877244880-b6lu486i3uch83bgin5ku07ef8j77v8f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCWsJKsqIFmjJ7s5ACbTj5_mX53SK_AR-Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "526877244880-b6lu486i3uch83bgin5ku07ef8j77v8f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
