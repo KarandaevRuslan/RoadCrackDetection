@@ -120,3 +120,6 @@ test-yolo/
 *.docx
 *.xlsx
 *.pdf
+
+# Code for training yolo segmentation model (weights too much)
+segmentation_model_proj/
