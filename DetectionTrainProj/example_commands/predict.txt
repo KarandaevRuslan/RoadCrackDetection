@@ -1,0 +1,12 @@
+.\.venv\Scripts\yolo.exe detect predict `
+  model="D:\Other\university\Works\5th semester\Team Project\DetectionTrainProj\best_models\best_stripped.pt" `
+  source="D:\Other\university\Works\5th semester\Team Project\DetectionTrainProj\test_samples" `
+  imgsz=768 `
+  conf=0.22 `
+  iou=0.7 `
+  device=0 `
+  save=True `
+  save_txt=True `
+  save_conf=True `
+  project="D:\Other\university\Works\5th semester\Team Project\DetectionTrainProj\runs\predict" `
+  name="best_stripped_test_samples_768"

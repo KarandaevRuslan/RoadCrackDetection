@@ -1,0 +1,12 @@
+python -m voc_yolo_builder ^
+  --source-root "D:\Other\university\Works\5th semester\Team Project\DetectionTrainProj\source_dataset" ^
+  --output-dir "D:\Other\university\Works\5th semester\Team Project\DetectionTrainProj\converted_to_yolo_datasets\yolo_dataset" ^
+  --sample-fraction 1.0 ^
+  --max-output-images 40000 ^
+  --validation-ratio 0.10 ^
+  --test-ratio 0.10 ^
+  --sampling-strategy balanced ^
+  --target-min-images-per-class 1200 ^
+  --min-source-images-per-class 800 ^
+  --random-seed 42 ^
+  --use-hardlinks

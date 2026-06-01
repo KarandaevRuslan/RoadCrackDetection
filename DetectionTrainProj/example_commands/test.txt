@@ -1,0 +1,14 @@
+.\.venv\Scripts\yolo.exe val `
+  model="D:\Other\university\Works\5th semester\Team Project\DetectionTrainProj\best_models\best_stripped.pt" `
+  data="D:\Other\university\Works\5th semester\Team Project\DetectionTrainProj\converted_to_yolo_datasets\yolo_dataset\data.yaml" `
+  split=test `
+  imgsz=768 `
+  batch=1 `
+  conf=0.001 `
+  iou=0.7 `
+  device=0 `
+  plots=True `
+  save_json=True `
+  save_txt=True `
+  save_conf=True `
+  name="best_stripped_test_768"

@@ -1,0 +1,12 @@
+[project]
+name = "voc-yolo-builder"
+version = "0.1.0"
+description = "Pascal VOC XML to YOLO dataset builder"
+requires-python = ">=3.9"
+dependencies = []
+
+[project.optional-dependencies]
+image-size-fallback = ["Pillow>=9"]
+
+[project.scripts]
+voc-yolo-builder = "voc_yolo_builder.cli:main"

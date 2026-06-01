@@ -98,9 +98,7 @@ nosetests.xml
 pytest.xml
 .ipynb_checkpoints/
 
-### Project-specific ignores ###
-# PyTorch model checkpoints (pt = PyTorch serialized model file)
-best*.pt
+*.pt
 
 # ClamAV data / working dir (ClamAV = antivirus engine)
 clamav/
@@ -121,5 +119,9 @@ test-yolo/
 *.xlsx
 *.pdf
 
-# Code for training yolo segmentation model (weights too much)
-segmentation_model_proj/
+DetectionTrainProj/best_models/
+converted_to_yolo_datasets/
+pretrained_models/
+runs/
+source_dataset/
+test_samples/

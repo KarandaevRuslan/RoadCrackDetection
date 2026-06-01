@@ -1,0 +1,37 @@
+.\.venv\Scripts\yolo.exe detect train `
+  model="D:\Other\university\Works\5th semester\Team Project\DetectionTrainProj\pretrained_models\yolo11s.pt" `
+  data="D:\Other\university\Works\5th semester\Team Project\DetectionTrainProj\converted_to_yolo_datasets\yolo_dataset\data.yaml" `
+  project="D:\Other\university\Works\5th semester\Team Project\DetectionTrainProj\runs" `
+  name="yolo11s_road_damage_768_full_001" `
+  exist_ok=False `
+  epochs=1000 `
+  patience=100 `
+  save=True `
+  save_period=1 `
+  imgsz=768 `
+  batch=-1 `
+  device=0 `
+  amp=True `
+  cache=False `
+  workers=4 `
+  rect=False `
+  hsv_h=0.015 `
+  hsv_s=0.45 `
+  hsv_v=0.35 `
+  degrees=3 `
+  translate=0.08 `
+  scale=0.35 `
+  shear=1.0 `
+  perspective=0.0002 `
+  fliplr=0.5 `
+  flipud=0.0 `
+  mosaic=0.35 `
+  close_mosaic=50 `
+  mixup=0.0 `
+  cutmix=0.0 `
+  copy_paste=0.0
+	
+	
+.\.venv\Scripts\yolo.exe detect train `
+  resume=True `
+  model="D:\Other\university\Works\5th semester\Team Project\segmentation_model_proj\runs\yolo11s_road_damage_768_full_001\weights\last.pt"

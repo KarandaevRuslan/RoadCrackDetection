@@ -1,7 +1,0 @@
-yolo detect predict `
-  model=D:\Downloads\proj\best_models\best_1.pt `
-  source=D:\DOWNLOADS\proj\DATA\Czech\test\images `
-  imgsz=768 `
-  conf=0.22 `
-  device=0 `
-  save=True
